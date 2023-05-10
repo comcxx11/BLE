@@ -7,19 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6335249F2A0B53300074A62D /* BluetoothSerial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6335249E2A0B53300074A62D /* BluetoothSerial.swift */; };
+		633524A12A0B7B1C0074A62D /* SerialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633524A02A0B7B1C0074A62D /* SerialViewController.swift */; };
+		633524A32A0B7B240074A62D /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633524A22A0B7B240074A62D /* ScanViewController.swift */; };
 		6377A1D72A023AC4001D6076 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6377A1D62A023AC4001D6076 /* AppDelegate.swift */; };
 		6377A1D92A023AC4001D6076 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6377A1D82A023AC4001D6076 /* SceneDelegate.swift */; };
-		6377A1DB2A023AC4001D6076 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6377A1DA2A023AC4001D6076 /* ViewController.swift */; };
 		6377A1DE2A023AC4001D6076 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6377A1DC2A023AC4001D6076 /* Main.storyboard */; };
 		6377A1E02A023AC6001D6076 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6377A1DF2A023AC6001D6076 /* Assets.xcassets */; };
 		6377A1E32A023AC6001D6076 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6377A1E12A023AC6001D6076 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6335249E2A0B53300074A62D /* BluetoothSerial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothSerial.swift; sourceTree = "<group>"; };
+		633524A02A0B7B1C0074A62D /* SerialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerialViewController.swift; sourceTree = "<group>"; };
+		633524A22A0B7B240074A62D /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		6377A1D32A023AC4001D6076 /* BLE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6377A1D62A023AC4001D6076 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6377A1D82A023AC4001D6076 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6377A1DA2A023AC4001D6076 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6377A1DD2A023AC4001D6076 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6377A1DF2A023AC6001D6076 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6377A1E22A023AC6001D6076 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +62,9 @@
 			children = (
 				6377A1D62A023AC4001D6076 /* AppDelegate.swift */,
 				6377A1D82A023AC4001D6076 /* SceneDelegate.swift */,
-				6377A1DA2A023AC4001D6076 /* ViewController.swift */,
+				6335249E2A0B53300074A62D /* BluetoothSerial.swift */,
+				633524A02A0B7B1C0074A62D /* SerialViewController.swift */,
+				633524A22A0B7B240074A62D /* ScanViewController.swift */,
 				6377A1DC2A023AC4001D6076 /* Main.storyboard */,
 				6377A1DF2A023AC6001D6076 /* Assets.xcassets */,
 				6377A1E12A023AC6001D6076 /* LaunchScreen.storyboard */,
@@ -138,9 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6377A1DB2A023AC4001D6076 /* ViewController.swift in Sources */,
 				6377A1D72A023AC4001D6076 /* AppDelegate.swift in Sources */,
+				6335249F2A0B53300074A62D /* BluetoothSerial.swift in Sources */,
 				6377A1D92A023AC4001D6076 /* SceneDelegate.swift in Sources */,
+				633524A12A0B7B1C0074A62D /* SerialViewController.swift in Sources */,
+				633524A32A0B7B240074A62D /* ScanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +298,8 @@
 				DEVELOPMENT_TEAM = SW8JAD37YH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BLE/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Allow for bluetooth";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Please allow using bluetooth for discovering peripheral";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -318,6 +328,8 @@
 				DEVELOPMENT_TEAM = SW8JAD37YH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = BLE/Info.plist;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Allow for bluetooth";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "Please allow using bluetooth for discovering peripheral";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
