@@ -17,23 +17,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmj-EB-Kdu">
-                                <rect key="frame" x="321" y="113" width="62" height="35"/>
+                                <rect key="frame" x="321" y="112.99999999999999" width="62" height="34.333333333333329"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Scan"/>
                                 <connections>
                                     <action selector="scanButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i4L-Uh-686"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="A9c-Kv-tyi">
+                                <rect key="frame" x="101.66666666666669" y="369.66666666666669" width="190" height="112.66666666666669"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEq-nf-Z70">
+                                        <rect key="frame" x="26.666666666666671" y="0.0" width="136.33333333333331" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Send Message"/>
+                                        <connections>
+                                            <action selector="sendMessageButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ojj-Ir-6CS"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message from Peripheral" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1SY-NC-n0O">
+                                        <rect key="frame" x="0.0" y="92.333333333333314" width="190" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="A9c-Kv-tyi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0zL-eB-I4X"/>
+                            <constraint firstItem="A9c-Kv-tyi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5hJ-PE-JaO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tmj-EB-Kdu" secondAttribute="trailing" constant="10" id="NIr-cA-Whx"/>
                             <constraint firstItem="tmj-EB-Kdu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="aZv-qq-o7S"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="g0j-TS-iFZ"/>
                     <connections>
+                        <outlet property="serialMessageLabel" destination="1SY-NC-n0O" id="ROB-rg-J33"/>
                         <segue destination="07s-uh-u8H" kind="show" identifier="ScanViewController" id="Fz6-Dy-yEW"/>
                     </connections>
                 </viewController>
