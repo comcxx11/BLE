@@ -75,7 +75,7 @@ extension BluetoothSerial {
         // CBCentralManager의 메서드인 scanForPeripherals를 호출하여 연결가능한 기기들을 검색합니다.
         // 이 때 withService 파라미터에 nil을 입력하면 모든 종류의 기기가 검색되고,
         // 지금과 같이 serviceUUID를 입력하면 특정 serviceUUID를 가진 기기만을 검색합니다.
-        centralManager.scanForPeripherals(withServices: nil, options: nil)
+        centralManager.scanForPeripherals(withServices: [serviceUUID], options: nil)
         
         let peripherals = centralManager.retrieveConnectedPeripherals(withServices: [serviceUUID])
         
