@@ -35,6 +35,11 @@ var serial: BluetoothSerial!
 
 class BluetoothSerial: NSObject {
     
+    enum SearchType {
+        case all
+        case HM10
+    }
+    
     /// centralManager은 블루투스 주변기기를 검색하고 연결하는 역할을 수행합니다.
     var centralManager : CBCentralManager!
     
@@ -56,6 +61,8 @@ class BluetoothSerial: NSObject {
     /// characteristicUUID는 serviceUUID에 포함되어있습니다. 이를 이용하여 데이터를 송수신합니다. FFE0 서비스가 갖고있는 FFE1로 설정하였습니다. 하나의 service는 여러개의 characteristicUUID를 가질 수 있습니다.
     var characteristicUUID = CBUUID(string : "FFE1")
     
+    var searchType = SearchType.HM10
+    
     /// BluetoothSerialDelegate 프로토콜에 등록된 메서드를 수행하는 delegate입니다.
     var delegate: BluetoothSerialDelegate?
     
@@ -75,7 +82,13 @@ extension BluetoothSerial {
         // CBCentralManager의 메서드인 scanForPeripherals를 호출하여 연결가능한 기기들을 검색합니다.
         // 이 때 withService 파라미터에 nil을 입력하면 모든 종류의 기기가 검색되고,
         // 지금과 같이 serviceUUID를 입력하면 특정 serviceUUID를 가진 기기만을 검색합니다.
-        centralManager.scanForPeripherals(withServices: [serviceUUID], options: nil)
+        switch searchType {
+        case .all:
+            centralManager.scanForPeripherals(withServices: nil, options: nil)
+        case .HM10:
+            centralManager.scanForPeripherals(withServices: [serviceUUID], options: nil)
+        }
+        
         
         let peripherals = centralManager.retrieveConnectedPeripherals(withServices: [serviceUUID])
         

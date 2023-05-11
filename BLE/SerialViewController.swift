@@ -13,6 +13,8 @@ class SerialViewController: UIViewController, BluetoothSerialDelegate {
         super.viewDidLoad()
         
         serial = BluetoothSerial.init()
+        
+        self.title = "페리퍼럴 캐리터리스틱"
     }
     
     @IBAction func scanButton(_ sender: Any) {

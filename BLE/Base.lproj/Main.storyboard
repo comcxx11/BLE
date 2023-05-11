@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmj-EB-Kdu">
-                                <rect key="frame" x="165.66666666666666" y="408.66666666666669" width="62" height="35"/>
+                                <rect key="frame" x="321" y="113" width="62" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Scan"/>
                                 <connections>
@@ -28,8 +28,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="tmj-EB-Kdu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="agW-VB-U7h"/>
-                            <constraint firstItem="tmj-EB-Kdu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mmk-cM-mzD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tmj-EB-Kdu" secondAttribute="trailing" constant="10" id="NIr-cA-Whx"/>
+                            <constraint firstItem="tmj-EB-Kdu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="aZv-qq-o7S"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="g0j-TS-iFZ"/>
