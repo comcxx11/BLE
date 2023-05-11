@@ -143,7 +143,7 @@ extension BluetoothSerial: CBCentralManagerDelegate {
     }
     
     func centralManager(_ central: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {
-        print(error)
+        print(error ?? "")
     }
     
 }
