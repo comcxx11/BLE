@@ -12,7 +12,7 @@ import UIKit
 class SerialViewController: UIViewController, BluetoothSerialDelegate {
     
     @IBOutlet weak var serialMessageLabel: UILabel!
-    
+    var msg = "1"
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,7 +34,12 @@ class SerialViewController: UIViewController, BluetoothSerialDelegate {
         // 시리얼의 delegate를 SerialViewController로 설정합니다.
         serial.delegate = self
         
-        let msg = "1"
+        if msg == "1" {
+            msg = "2"
+        } else {
+            msg = "1"
+        }
+        
         serial.sendMessageToDevice(msg)
         
         serialMessageLabel.text = "Waiting for Peripherak's message"

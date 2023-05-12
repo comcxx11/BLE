@@ -104,6 +104,7 @@ extension BluetoothSerial {
             centralManager.scanForPeripherals(withServices: [serviceUUID], options: nil)
         }
         
+        print("start scan \(searchType)")
         
         let peripherals = centralManager.retrieveConnectedPeripherals(withServices: [serviceUUID])
         
