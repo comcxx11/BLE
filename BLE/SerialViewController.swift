@@ -28,6 +28,7 @@ class SerialViewController: UIViewController, BluetoothSerialDelegate {
     @IBAction func sendMessageButton(_ sender: Any) {
         if !serial.bluetoothIsReady {
             print("시리얼이 준비되지 않음")
+            serialMessageLabel.text = "No Serial"
             return
         }
         
@@ -42,7 +43,7 @@ class SerialViewController: UIViewController, BluetoothSerialDelegate {
         
         serial.sendMessageToDevice(msg)
         
-        serialMessageLabel.text = "Waiting for Peripherak's message"
+        serialMessageLabel.text = "Waiting for Peripherak's message \(msg)"
     }
     
     /// 데이터가 전송된 후 Peripheral로 부터 응답이 오면 호출되는 메서드입니다.
