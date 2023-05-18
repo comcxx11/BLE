@@ -35,11 +35,10 @@ class SerialViewController: UIViewController, BluetoothSerialDelegate {
         // 시리얼의 delegate를 SerialViewController로 설정합니다.
         serial.delegate = self
         
-        if msg == "1" {
-            msg = "2"
-        } else {
-            msg = "1"
-        }
+        let randomInt = Int.random(in: 1...9)
+        print(randomInt)
+        
+        msg = String(randomInt)
         
         serial.sendMessageToDevice(msg)
         
